@@ -15,10 +15,19 @@ const presidents = [
 
 //Challenge Questions
 //1) Filter all presidents, leaving only the Democratic ones
-const democrats = presidents.filter((president) => (president.party = "D"));
+const democrats = presidents.filter((president) =>
+  president.party.includes("D")
+);
 console.table(democrats);
 
 //2)Filter all presidents to leave only one term Republican presidents HINT use If statement
+const republicans1 = presidents.filter(function (president) {
+  if (president.terms < 2 && president.party.includes("R")) {
+    return true;
+  }
+});
+
+console.table(republicans1);
 
 //3) return only the last three presidents
 
