@@ -41,11 +41,23 @@ const democrats2 = presidents.filter(
 console.log(democrats2);
 
 //BONUS write a script to check if LBJ was a 2 term president. IF he was then alert("LBJ served two terms") else alert "LBJ was one and done"
-//LBJ has an index of 10
-const checker = presidents.filter(function (president) {
+//LBJ has an index of 10\
+
+/* presidents.filter(function (president) {
   if (president.name.includes("Lyndon Johnson") && president.terms === 2) {
-    // alert("LBJ served two terms");
+    alert("LBJ served two terms");
   } else {
-    //alert("LBJ was one and done");
+    alert("LBJ was one and done");
   }
-});
+}); */
+
+const LBJ = presidents[10];
+function termChecker(LBJ) {
+  if (LBJ.terms === 2) {
+    alert("LBJ served two terms");
+  } else {
+    alert("LBJ was one and done");
+  }
+}
+
+termChecker(LBJ);
